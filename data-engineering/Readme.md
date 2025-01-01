@@ -88,7 +88,7 @@ If you're working on similar data engineering topics or have suggestions, feel f
 ## 📬 Connect with Me
 
 Feel free to reach out for collaboration, questions, or feedback:
-- **GitHub**: [YourProfile](https://github.com/rizwanhaidar)
+- **GitHub**: [RizwanHaidar-Github](https://github.com/rizwanhaidar)
 - **Email**: rizwanhaidar@outlook.com
 
 Let’s build and scale amazing data solutions together! 🌍🚀
