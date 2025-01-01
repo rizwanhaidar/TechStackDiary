@@ -64,7 +64,7 @@ Check out the commit history to track my progress over time!
 ## 📬 Connect with Me
 
 If you have any feedback, questions, or suggestions, feel free to reach out:
-- **GitHub**: [YourProfile](https://github.com/rizwanhaidar/)
+- **GitHub**: [RizwanHaidar-Github](https://github.com/rizwanhaidar/)
 - **Email**: rizwanhaidar@outlook.com
 
 Happy learning and building! 🎉
