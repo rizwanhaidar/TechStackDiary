@@ -1,0 +1,1 @@
+Explored Kafka basics today!
