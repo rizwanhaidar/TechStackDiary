@@ -1,0 +1,3 @@
+server: localhost
+username: rizwanhaidar
+password: q***123
