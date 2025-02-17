@@ -17,3 +17,7 @@ SELECT * FROM customers ;
 
 SELECT count(*) FROM customers ;
 
+SELECT * FROM CUSTOMERS LIMIT 10;
+
+
+
