@@ -26,10 +26,3 @@ customers_df = generate_customers(100000)
 
 # Save to CSV (optional)
 customers_df.to_csv("customers.csv", index=False)
-
-# Insert into MySQL
-# Replace with your MySQL credentials
-engine = create_engine("mysql+pymysql://rizwanhaidar:qaws123@localhost/CRM_System")
-customers_df.to_sql("customers", con=engine, if_exists="replace", index=False)
-
-print("Customer data generated and inserted into MySQL!")

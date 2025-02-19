@@ -2,6 +2,7 @@
 -- USE CRM_System;
 -- USER rizwanhaidar
 -- Pass ****123
+TRUNCATE TABLE CRM_System.customers ;
 
 CREATE TABLE CRM_System.customers (
     customer_id VARCHAR(36) PRIMARY KEY,
