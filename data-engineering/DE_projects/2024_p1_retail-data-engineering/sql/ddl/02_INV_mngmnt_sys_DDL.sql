@@ -23,9 +23,9 @@ CREATE TABLE products (
 
 
 
-SELECT * FROM products ;
+SELECT * FROM products;
 
-SELECT count(*) FROM products ;
+SELECT count(*) FROM products;
 
 SELECT * FROM products LIMIT 10;
 
