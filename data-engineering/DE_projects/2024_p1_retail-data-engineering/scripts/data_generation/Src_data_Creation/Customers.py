@@ -26,3 +26,5 @@ customers_df = generate_customers(100000)
 
 # Save to CSV (optional)
 customers_df.to_csv("customers.csv", index=False)
+
+print("Product data generated and saved to file system!")

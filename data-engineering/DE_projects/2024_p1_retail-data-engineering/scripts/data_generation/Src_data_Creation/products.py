@@ -1,8 +1,6 @@
 import pandas as pd
 import uuid
 from faker import Faker
-from sqlalchemy import create_engine
-from datetime import datetime
 
 # Initialize Faker
 fake = Faker()
@@ -43,15 +41,10 @@ def generate_products(num_records):
         })
     return pd.DataFrame(products)
 
-# Generate 10,000 product records
+# Generate 2000 product records
 products_df = generate_products(2000)
 
-# Save to CSV (optional)
+# Save to CSV
 products_df.to_csv("products.csv", index=False)
 
-# Insert into MySQL
-# Replace with your MySQL credentials
-# engine = create_engine("mysql+pymysql://user:password@localhost/retail_db")
-# products_df.to_sql("products", con=engine, if_exists="replace", index=False)
-
-print("Product data generated and inserted into MySQL!")
+print("Product data generated and saved to file system!")
