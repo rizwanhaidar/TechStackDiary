@@ -6,6 +6,11 @@ services:
     container_name: zookeeper
     ports:
       - "2181:2181"
+    healthcheck:
+      test: ["CMD", "echo", "ruok", "|", "nc", "localhost", "2181", "|", "grep", "imok"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   kafka:
     image: wurstmeister/kafka
@@ -19,6 +24,11 @@ services:
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
     depends_on:
       - zookeeper
+    healthcheck:
+      test: ["CMD", "kafka-broker-api-versions", "--bootstrap-server", "localhost:9092"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   spark:
     image: bitnami/spark:latest
@@ -28,6 +38,11 @@ services:
       - "7077:7077"
     environment:
       SPARK_MODE: master
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   minio:
     image: minio/minio
@@ -39,6 +54,11 @@ services:
       MINIO_ROOT_USER: minio
       MINIO_ROOT_PASSWORD: minio123
     command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9001/minio/health/live"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   trino:
     image: trinodb/trino
@@ -47,6 +67,11 @@ services:
       - "8088:8088"
     depends_on:
       - minio
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8088/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   postgres:
     image: postgres:13
@@ -57,12 +82,22 @@ services:
       POSTGRES_DB: airflow
     ports:
       - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   redis:
     image: redis:latest
     container_name: redis
     ports:
       - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   airflow:
     image: apache/airflow:2.6.3
@@ -85,3 +120,8 @@ services:
       - ./airflow/plugins:/opt/airflow/plugins
     command: >
       bash -c "airflow db init && airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com && airflow scheduler & airflow webserver"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
