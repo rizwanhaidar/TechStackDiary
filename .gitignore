@@ -1,0 +1,38 @@
+data-engineering/DE_projects/2024_p1_retail-data-engineering/scripts/data_generation/Src_data_Creation/BULK_transactions_extract_20250226.zip
+/data-engineering/DE_projects/2025_p2_Real-time_Stock_Price_Analytics/scripts/Real-time_Stock_Price_Analytics/airflow-docker
+/data-engineering/tools/Apache-Airflow/airflow-docker
+
+
+# IDE & Editor Files
+.idea/
+*.iml
+*.vcs.xml
+*.workspace.xml
+*.misc.xml
+*.modules.xml
+*.inspectionProfiles/
+
+# Logs & Debugging Files
+logs/
+*.log
+
+# Environment & Configuration Files
+.env
+#docker-compose.yaml
+#docker-compose.yml
+
+# Sensitive Files (e.g., Credentials)
+#data-engineering/DE_projects/2024_p1_retail-data-engineering/conn_details/MySQL/rizwanhaidar.txt
+
+# Data Files & Temporary Output
+#*.csv
+*.zip
+#*.xlsx
+
+# Python Cache & Compiled Binaries
+__pycache__/
+*.pyc
+*.pyo
+
+# SQL & Database Files
+#*.sql
