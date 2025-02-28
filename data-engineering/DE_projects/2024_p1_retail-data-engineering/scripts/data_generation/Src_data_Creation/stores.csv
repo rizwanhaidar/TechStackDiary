@@ -1,0 +1,3 @@
+,store_id,store_name,address,city,state,country,postal_code,manager_id,contact_email,contact_phone,opening_date,store_closing_date,is_active,created_at,updated_at
+0,c13e338c-f853-4f76-9ccf-83255764caf8,"Mays, Thomas and Smith","062 Anderson Drive, East Paula, IL 95210",West Crystalburgh,North Dakota,Lesotho,72110,9c60bb06-4c7c-4b4d-bcb5-664567c5cce4,rtaylor@example.org,402.272.3706x67694,2023-12-13 19:53:24,,True,2020-07-19 13:39:40,2021-05-05 01:42:31
+1,d8d033d5-ba75-4621-a02c-682e0c11677b,Armstrong-Harris,"8735 Jones Fort Apt. 787, Michaeltown, AL 37273",Robinsonstad,Vermont,Rwanda,76404,a045bbe0-2a32-4e21-ae92-fecf8b0f733c,chase49@example.com,945-794-1767x332,2021-01-14 07:32:54,,True,2021-07-18 13:39:37,2023-03-19 09:58:00
